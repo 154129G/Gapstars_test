@@ -4,13 +4,14 @@
 =====================================================================================================================================
 
 
-*   The await keyword is used in an async function to ensure that all promises returned in the async function are synchronized,
-    they wait for each other. Await eliminates the use of callbacks.
 
-*   When we add some an other function inside of the callbacks it will be create a call back hell.Await eliminates the call back hell.
+*   I used axios instead request because it has been deprecated and axios can easily handle requests asynchronously. 
+    Among so many features, axios can get the response directly as a Buffer.
+
+*   Using async await, we can avoid the callback hell. Otherwise we would end up with so many nested callbacks. 
+    It's just syntactical sugar for JavaScript promises. Until the response event triggers, the thread will be released for other operations.
 
 *   They can handle multiple asynchronous operations easily and provide better error handling than callbacks and events.
 
-*   ES6 promises are faster and recommended than old callbacks.
-
-*   I used axios library for call externale API. Becouse request has been deprecated and axios can easyly manage and  suported async    and  there are so many key features have inside of the package. We can get responces derectly as a Buffer.
+*   Moved blend and writeFile callbacks inside Promises. This way we can simply use async await instead callbacks in the main function. 
+    This way the code will syntactically look like a synchronous code. This code is more clean, readable and maintainable.
