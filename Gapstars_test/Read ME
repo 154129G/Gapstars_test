@@ -1,4 +1,15 @@
 
+   Setup instructions
+====================================================================================================================================
+ 
+ 01. Go to file location and Run command "npm install" in the terminale
+ 02. Call my assesment  app.js file  run the command "node app.js" in the terminale
+ 03. Pass parameters using argv "node app.js  --greeting  <your greeting as a string>   --who <your who as a string>"  in the terminale
+     like this you can pass every arguments using terminale out side of the app.js file (width = number, height = number, color = 'string',
+     size = number,)
+     
+ 
+ 
  
     app.js is my modified Js File.
 =====================================================================================================================================
