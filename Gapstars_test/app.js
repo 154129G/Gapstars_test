@@ -9,10 +9,19 @@ let {
     width = 400, height = 500, color = 'Pink', size = 100,
 } = argv;
 
+
+//get image data using from externale API
+// Call axios get method
+// parameters :  says : string 
+// return type : image Data as a Buffer
 function callCat(says) {
     return axios.get(`https://cataas.com/cat/says/${says}`, { responseType: 'arraybuffer', params: { width, height, color, s: size } });
 }
 
+//Blend 2 images using two Buffer
+// parameters :  b1  : Buffer 
+//               b2  : Buffer
+// return type : jpeg image file
 function blendImages(b1, b2) {
     return new Promise((resolve, reject) => {
         blend([
@@ -28,6 +37,10 @@ function blendImages(b1, b2) {
     })
 }
 
+//Blend 2 images using two Buffer
+// parameters :  fileOut  : saved file path 
+//               data  : jpeg image file
+// responce type :  file
 function writeToImage(fileOut, data) {
     return new Promise((resolve, reject) => {
         writeFile(fileOut, data, 'binary', (err) => {
@@ -41,6 +54,7 @@ function writeToImage(fileOut, data) {
     });
 }
 
+//main function 
 async function main() {
     try {
         const res1 = await callCat(greeting);
@@ -56,4 +70,6 @@ async function main() {
 
 }
 
+
+// Call main function 
 main();
