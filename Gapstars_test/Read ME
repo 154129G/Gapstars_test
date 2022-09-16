@@ -9,11 +9,8 @@
      size = number,)
      
  
- 
- 
-    app.js is my modified Js File.
+   Documentation about changes
 =====================================================================================================================================
-
 
 
 *   I used axios instead request because it has been deprecated and axios can easily handle requests asynchronously. 
